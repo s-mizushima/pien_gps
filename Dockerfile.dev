@@ -1,0 +1,20 @@
+# 開発用 Dockerfile (Next.js + pnpm)
+FROM node:20-alpine
+
+# 作業ディレクトリ
+WORKDIR /app
+
+# corepack 経由で pnpm を有効化
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+# 依存関係のインストール (lockfile を優先的にコピーしてキャッシュを効かせる)
+COPY app/package.json app/pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
+
+# ソースコードは docker-compose のボリュームマウントで上書きされる想定
+# (ビルド時点ではソースはコピーしない)
+
+EXPOSE 3000
+
+# Next.js 開発サーバー起動
+CMD ["pnpm", "dev"]

@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm --version)",
+      "Bash(docker --version)",
+      "Bash(docker compose *)",
+      "Bash(corepack --version)",
+      "Bash(corepack enable *)",
+      "Bash(pnpm create *)",
+      "Bash(lsof -iTCP:3000 -sTCP:LISTEN)",
+      "Bash(curl -s https://registry.npmjs.org/exifr/latest)",
+      "Bash(curl -s -o /dev/null -w \"1st: http=%{http_code}\\\\n\" --max-time 10 https://erss.ngrok.io/)",
+      "Bash(curl -s -o /dev/null -w \"2nd: http=%{http_code}\\\\n\" --max-time 10 https://erss.ngrok.io/)",
+      "Bash(curl -s --max-time 10 https://erss.ngrok.io/ -o /tmp/ngrok_body)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' --max-time 10 https://erss.ngrok.io/)",
+      "Bash(echo \"http=$\\(curl -s -o /dev/null -w '%{http_code}' --max-time 10 https://erss.ngrok.io/\\)\")",
+      "Bash(curl -s -o /dev/null -w \"localhost http=%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"ngrok     http=%{http_code}\\\\n\" --max-time 10 https://erss.ngrok.io/)",
+      "Bash(curl -s -o /dev/null https://erss.ngrok.io/)"
+    ]
+  }
+}

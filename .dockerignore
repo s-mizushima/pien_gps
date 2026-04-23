@@ -1,0 +1,30 @@
+# Git
+.git
+.gitignore
+
+# 依存関係・ビルド成果物 (コンテナ側で生成)
+app/node_modules
+app/.next
+app/out
+app/dist
+
+# 環境変数 (.env.local は compose の env_file で渡す)
+.env
+.env.local
+.env.*.local
+
+# ログ
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# エディタ・OS
+.DS_Store
+.vscode
+.idea
+*.swp
+*.swo
+
+# ドキュメント類
+README.md

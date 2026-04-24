@@ -70,10 +70,13 @@ export default function HomePage() {
     <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-8 px-4 py-10 md:px-8 md:py-14">
       <header className="flex flex-col gap-2">
         <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">
-          Photo GPS Viewer
+          不倫チェック
         </h1>
         <p className="text-sm text-zinc-600 md:text-base">
-          写真をアップロードすると、EXIF から GPS の緯度経度と撮影日時を抽出して表示します。
+          写真をアップロードすると、EXIF から GPS の緯度経度と撮影日時を抽出します。
+          「本当にその場所にいたのか」「いつ撮られた写真なのか」を地図リンク付きで確認できます。
+        </p>
+        <p className="text-xs text-zinc-500">
           画像はブラウザ内だけで処理され、サーバーには送信されません。
         </p>
       </header>

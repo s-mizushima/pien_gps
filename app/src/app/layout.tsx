@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Photo GPS App",
-  description: "写真の EXIF から位置情報を抽出して表示するツール",
+  title: "不倫チェック | 写真から撮影場所と日時を確認",
+  description:
+    "写真の EXIF から GPS 位置情報と撮影日時を抽出して、本当にその場所にいたかを確認できるツール。画像はブラウザ内だけで処理され、サーバーには送信されません。",
 };
 
 export default function RootLayout({
